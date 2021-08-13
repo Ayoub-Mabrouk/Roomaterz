@@ -1,0 +1,36 @@
+
+$blue:blue;
+$green:green;
+$not_liked: invert(47%) sepia(9%) saturate(591%) hue-rotate(166deg) brightness(97%) contrast(90%);
+$liked: invert(11%) sepia(77%) saturate(5626%) hue-rotate(345deg) brightness(97%) contrast(104%);
+$primary-bg-color:#F2F2F7;
+$gray_2: rgb(174,174,178);
+$gray_5:rgb(229,229,234);
+$cool_white:#FAFCFC;
+$cool_sky_blue:#bed6d8;
+$cool_dark_sky_blue:#82AAAD;
+$cool_black:#3C454C;
+$under_cool_black:#595260;
+$color-indingo:rgb(88,86,214);
+$color-yellow: rgb(255, 204, 0);
+$primary-bg-color-dark:darken($primary-bg-color,30%);
+$main-font:"Helvetica";
+$iphone6_7_8:806px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    transition: 0.3s;
+}
+
+@mixin iphone6_7_8 {
+    @media (max-width:#{$iphone6_7_8}){
+        @content;
+    }
+}
+.liked{
+    filter: $liked;
+}
+.not_liked{
+    filter: $not_liked;
+}
